@@ -3,14 +3,14 @@ body{
     font-size: 14px;
     font-family: arial,sans-serif;
     color: #222;
-    min-height: 100vh;
-    flex-direction: column;
-     display: flex;
+
+    
 }
 
 .container{
-   
-    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .menu
@@ -253,7 +253,7 @@ a.gb_D {
         flex-shrink: 0;
     box-sizing: border-box;
         display: block;
-        height: 100%;
+        min-height: 360px;
     }
 
     .stopka{
@@ -303,6 +303,8 @@ a.gb_D {
     min-width: 30%;
 
 }
+
+
 
 .iTjxkf {
     justify-content: flex-end;
