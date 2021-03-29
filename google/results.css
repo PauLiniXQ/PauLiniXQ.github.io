@@ -12,6 +12,10 @@ body.results{
 .results .puste{
     display: none;
 }
+
+.results .gog{
+    min-height: 10px;
+}
 .results .menu
 {
     width: 15%;
