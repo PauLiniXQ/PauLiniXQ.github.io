@@ -1,4 +1,4 @@
-body{
+body.home{
     margin: 0;
     font-size: 14px;
     font-family: arial,sans-serif;
@@ -9,12 +9,15 @@ body{
     
 }
 
+.home .ukryj{
+    display: none;
+}
 .container{
     display: flex;
     flex-direction: column;
 }
 
-.menu
+ .menu
 {
     min-width: auto;
     font-variant-ligatures: normal;
@@ -39,7 +42,7 @@ body{
 
 }
 
-.button
+ .button
 {
     padding-left: 0;
     float: right;
@@ -58,7 +61,7 @@ body{
     display: flex;
 }
 
-a.gb_g{
+ a.gb_g{
     text-decoration-line: none;
     text-decoration-thickness: initial;
     text-decoration-style: initial;
@@ -67,7 +70,7 @@ a.gb_g{
     line-height: 24px;
     
 }
-.gb_g{
+ .gb_g{
     display: inline-block;
     vertical-align: middle;
     font-family: Roboto, RobotoDraft, Arial, sans-serif;
@@ -82,12 +85,11 @@ a.gb_g{
     padding: 13px;
 }
 
-a.gb_D {
+ a.gb_D {
     cursor: pointer;
     text-decoration: none;
     }
-
-    .gb_D{
+ .gb_D{
     background-position-x: -64px;
     background-position-y: -29px;
     padding: 6px;
@@ -108,13 +110,12 @@ a.gb_D {
 
     }
 
-    .gb_Xe path{
+ .gb_Xe path{
         color: #5f6368;
         opacity: 1;
         fill: currentColor;
     }
-
-    .zaloguj{
+ .zaloguj{
         cursor: pointer;
         color: #fff;
         text-decoration-line: none;
@@ -175,12 +176,11 @@ a.gb_D {
 
     
     
-    form{
+  form{
         display: block;
     }
 
-
-    .wyszukaj {
+  .wyszukaj {
     width: 560px;
     padding: 20px;
     margin: 0px auto;
@@ -188,8 +188,7 @@ a.gb_D {
     text-align: center;
 }
 
-
-.wyszukaj .wpisz {
+ .wyszukaj .wpisz {
     display: block;
     border: 1px solid #ddd;
     color: rgba(0,0,0, 0.87);
@@ -203,7 +202,7 @@ a.gb_D {
 }
 
 
-.wyszukaj .przycisk {
+.home .wyszukaj .przycisk {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
@@ -219,7 +218,7 @@ a.gb_D {
     cursor: pointer;
     margin-top: 30px;
 }
-    .gog{
+  .home   .gog{
             display: flex;
     flex-direction: column;
     align-items: center;
@@ -229,14 +228,14 @@ a.gb_D {
     box-sizing: border-box;
     }
 
-    .gogin{
+   .home  .gogin{
         max-height: 92px;
         height: 100%;
     margin-top: auto;
         display: block;
     }
 
-    .logo{
+  .home   .logo{
             max-height: 100%;
     max-width: 100%;
     object-fit: contain;
@@ -244,27 +243,26 @@ a.gb_D {
     width: auto;
     }
 
-    img{
+   .home  img{
             height: 92px;
     aspect-ratio: auto 272 / 92;
     }
 
-    .puste{
+   .home  .puste{
         flex-grow: 1;
         flex-shrink: 0;
     box-sizing: border-box;
         display: block;
         min-height: 360px;
     }
-
-    .stopka{
+ .home .stopka{
             background: #f2f2f2;
             flex-shrink: 0;
         box-sizing: border-box;
         display: block;
     }
 
-    .pol{
+  .home .pol{
         padding: 15px 30px;
         border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -274,7 +272,7 @@ a.gb_D {
     display: block;
     }
 
-    .stop{
+  .home .stop{
         justify-content: space-evenly;
         display: flex;
     flex-wrap: wrap;
@@ -286,20 +284,20 @@ a.gb_D {
 
 
 
-.KxwPGc {
+.home .KxwPGc {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 
-.SSwjIe {
+ .home .SSwjIe {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 0px;
     padding-left: 20px;
 }
-.AghGtd {
+ .home .AghGtd {
     justify-content: flex-start;
     min-width: 30%;
 
@@ -307,16 +305,16 @@ a.gb_D {
 
 
 
-.iTjxkf {
+ .home .iTjxkf {
     justify-content: flex-end;
     min-width: 30%;
    
 }
 
-a.sbutt {
+.home a.sbutt {
     color: #70757a;
 }
-.sbutt {
+.home .sbutt {
     display: block;
     padding: 15px;
     padding-top: 15px;
@@ -325,16 +323,16 @@ a.sbutt {
     padding-left: 15px;
     white-space: nowrap;
 }
-a{
+ .home a{
     text-decoration: none;
 }
 
-.Pb9hCb {
+.home .Pb9hCb {
     height: 14px;
     margin-right: 6px;
 }
 
-.ktLKi {
+ .home .ktLKi {
     white-space: nowrap;
     vertical-align: top;
 }
