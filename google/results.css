@@ -9,6 +9,9 @@ body.results{
     flex-direction: column;
     min-height: 100vh;
 }
+.results .puste{
+    display: none;
+}
 .results .menu
 {
     width: 15%;
