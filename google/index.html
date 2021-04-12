@@ -11,11 +11,12 @@
     <link href="stylec.css" rel="stylesheet" type="text/css" />
     <link href="results.css" rel="stylesheet" type="text/css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     
 </head>
 
-<body class="results">
+<body  id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']">
 
 <div class="container">
     <div class="menu">
@@ -48,9 +49,10 @@
 
 <form>
     <div class="wyszukaj">
-        <input type="text" class="wpisz">
-        <input type="submit" class="przycisk" value="Szukaj w Google">
-        <input type="submit" class="przycisk" value="Szczęśliwy traf">
+        
+        <input v-model="googleSearch" type="text" class="wpisz"/>
+        <input type="submit" class="przycisk" value="Szukaj w Google"/>
+        <input type="submit" class="przycisk" value="Szczęśliwy traf"/>
     </div>
 </form>
 
@@ -238,5 +240,12 @@
 </div>
 
 </body>
-
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            googleSearch: '',
+        }
+    });
+</script>
 </html>
