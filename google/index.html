@@ -50,10 +50,11 @@
         <div class="wpisz">
                 <input v-model="googleSearch" @keyup.enter="akceptuj" type="search"/>
                 <div class="lista">
-                    <ul v-for="city in filtredCities" @click="wybierz(city)">
+                    <ul v-for="(city,index) in filtredCities" @click="wybierz(city)">
                         {{googleSearch}}<b>{{ city.name.substring(googleSearch.length) }}</b>
                     </ul>
                 </div>
+                
             </div>
                 <input type="submit" class="przycisk"  value="Szukaj w Google" />
                 <input type="submit" class="przycisk" value="Szczęśliwy traf" />
