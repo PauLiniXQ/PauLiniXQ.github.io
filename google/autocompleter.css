@@ -1,0 +1,47 @@
+.home ul
+{
+    display: block;
+    padding-top: 8px;
+     padding-bottom: 8px;
+     margin: 0;
+     text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+     font-family: arial,sans-serif;
+}
+
+
+.home li
+{
+    display: block;
+     margin: 0;
+     text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+     font-family: arial,sans-serif;
+}
+
+.results ul{
+    display: none;
+}
+.results li{
+    display: none;
+}
+
+.home ul:hover,
+.home ul:focus 
+{
+    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+}
+.wpisz input 
+{
+    display: block;
+    border: none;
+    color: rgba(0,0,0, 0.87);
+    font-size: 16px;
+    border-radius: 25px;
+    width: 100%;
+    transition: box-shadow 100ms;
+    outline: none;
+}
+
