@@ -12,10 +12,11 @@
     <link href="results.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="cities.js"></script>
+        <script src="autocompleter.js"></script>
 </head>
 
 <body>
-    <div id="app" :class="[wyszukaj.length > 0 ? 'results' : 'home']">
+    <div id="app" class="body" :class="[ showResults ? 'results' : 'home' ]">
         <div class="container">
             <div class="menu">
                 <div class="button">
@@ -48,21 +49,24 @@
             </div>
 
 
+
+          
+
+
             <form>
                 <div class="wyszukaj">
                     <div class="wpisz">
-                        <input v-model="googleSearch" @keyup.enter="akceptuj" type="search" />
-                        <div class="lista">
-                            <ul v-for="city in filtredCities" @click="wybierz(city)">
-                                {{googleSearch}}<b>{{ city.name.substring(googleSearch.length) }}</b>
-                            </ul>
-                        </div>
+                            <v-autocompleter v-model="googleSearch" :options="cities" @enter="toggleResults" @keypress.enter="submit">
+                            </v-autocompleter>
                     </div>
                     <input type="submit" class="przycisk" value="Szukaj w Google" />
                     <input type="submit" class="przycisk" value="Szczęśliwy traf" />
                 </div>
 
             </form>
+
+
+
 
             <div class="puste">
             </div>
@@ -265,32 +269,34 @@
         </div>
     </div>
 </body>
-<script>
-    var app = new Vue({
-        el: "#app",
-        data: {
-            googleSearch: "",
-            wyszukaj: "",
-            cities: window.cities,
-        },
-        computed: {
-            filtredCities() {
-                let result = this.cities.filter(city => city.name.startsWith(this.googleSearch) || city.name.toLowerCase().startsWith(this.googleSearch));
-                if (this.googleSearch.length > 0) {
-                    return result.slice(0, 10);
-                }
-            }
-        },
-        methods: {
-            akceptuj() {
-                this.wyszukaj = this.googleSearch
-            },
-            wybierz(city) {
-                this.googleSearch = city.name;
-                this.wyszukaj = this.googleSearch;
-            },
-        }
-    })
-</script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    googleSearch: '',
+                    cities: window.cities,
+                    showResults: false,
+                    isFocused: false,
+                    activeResult: 0,
+                    isInAutocompleter: false,
+                    filteredCities: [],
+                },
+                methods: {
+                    toggleFocused(value = undefined) {
+                        if (value === undefined) {
+                            return this.isFocused = !this.isFocused
+                        }
+                        this.isFocused = value
+                    },
+                    reset() {
+                        this.googleSearch = ''
+                        this.toggleResults(false)
+                    },
+                    toggleResults() {
+                        this.showResults = true;
+                    }
+                },
 
+            });
+        </script>
 </html>
