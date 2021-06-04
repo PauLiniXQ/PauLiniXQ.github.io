@@ -5,8 +5,6 @@ Vue.component('v-autocompleter', {
             :class="{ focused: shouldShowCitiesList }"
             @blur="toggleFocused(false)"
         >
-            <span class="input-box-loup" @click="submit"></span>
-            <span class="input-box-lupa"></span>
             <input
                 v-model="googleSearch"
                 ref="first"
@@ -28,7 +26,6 @@ Vue.component('v-autocompleter', {
                         v-for="(city, index) in filteredCities"
                         @click="select(city)"
                 >
-                    <span class="input-box-loup"></span>
                     <p v-html="boldName(city.name)"></p>
                 </li>
             </ul>
@@ -72,7 +69,7 @@ Vue.component('v-autocompleter', {
   },
   computed: {
     shouldShowCitiesList: function () {
-      return this.isFocused && this.googleSearch.length !== 0
+      return this.isFocused && this.googleSearch.length && this.showResults !== 0
     },
   },
   methods: {
