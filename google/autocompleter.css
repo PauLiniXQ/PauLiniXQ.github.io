@@ -17,9 +17,12 @@
      margin: 0;
      text-align: left;
     cursor: pointer;
-    font-size: 14px;
-     font-family: arial,sans-serif;
+    font-size: 15px;
+    font-family: arial,sans-serif;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
+
 
 .results ul{
     display: none;
@@ -27,12 +30,16 @@
 .results li{
     display: none;
 }
-
-.home ul:hover,
-.home ul:focus 
-{
-    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+.wyszukaj p{
+ margin: 0;
+ padding: 0;   
 }
+li:hover 
+{
+    background-color: rgb(228, 226, 229);
+}
+ 
+
 .wpisz input 
 {
     display: block;
