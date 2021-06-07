@@ -58,8 +58,13 @@
             <form>
                 <div class="wyszukaj">
                     <div class="wpisz">
-                            <v-autocompleter v-model="googleSearch" :options="cities" @enter="toggleResults" @keypress.enter="submit">
-                            </v-autocompleter>
+                          <!--  <v-autocompleter v-model="googleSearch" :options="cities" @enter="toggleResults" @keypress.enter="submit">
+                            </v-autocompleter> -->
+                                        {{ googleSearch }}
+                                <input type="text" v-model="googleSearch" @input="findResultsDebounced" />
+                                <div v-for="city in results" :key="city.name">
+                                <span class="name">{{ city.name }}</span>
+                                </div>
                     </div>
                     <input type="submit" class="przycisk" value="Szukaj w Google" />
                     <input type="submit" class="przycisk" value="Szczęśliwy traf" />
@@ -271,6 +276,28 @@
         </div>
     </div>
 </body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            googleSearch: '',
+            results: []
+        },
+        methods : {
+            findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
+                console.log('Fetch: ', this.googleSearch)
+                console.log(`http://localhost:8080/search?name=${this.googleSearch}`);
+                fetch(`http://localhost:8080/search?name=${this.googleSearch}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Data: ', data);
+                        this.results = data;
+                    });
+            })
+        }
+    })
+  	</script>
+      <!--
         <script>
             var app = new Vue({
                 el: '#app',
@@ -301,4 +328,5 @@
 
             });
         </script>
+        -->
 </html>
