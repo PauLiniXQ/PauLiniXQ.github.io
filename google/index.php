@@ -283,7 +283,7 @@
             results: []
         },
         methods : {
-            findResultsDebounced : Cowboy.debounce(10, function findResultsDebounced() {
+            findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
                 console.log('Fetch: ', this.googleSearch)
                 console.log(`http://localhost:8080/search.php?name=${this.googleSearch}`);
                 fetch(`http://localhost:8080/search.php?name=${this.googleSearch}`)
