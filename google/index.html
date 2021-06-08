@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="origin" name="referrer">
+    <meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">
+    <link href="/manifest?pwa=webhp" crossorigin="use-credentials" rel="manifest">
+    <title>Google</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+    <link href="stylec.css" rel="stylesheet" type="text/css" />
+    <link href="results.css" rel="stylesheet" type="text/css" />
+    <link href="autocompleter.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="autocompleter.js"></script>
+</head>
+
+<body>
+    <div id="app" class="body" :class="[ showResults ? 'results' : 'home' ]">
+        <div class="container">
+            <div class="menu">
+                <div class="button">
+                    <div class="nav">
+                        <a class="gb_g" data-pid="23" href="https://mail.google.com/mail/&amp;ogbl"
+                            target="_top">Gmail</a>
+                        <a class="gb_g" data-pid="2" href="https://www.google.pl/imghp?hl=pl&amp;ogbl"
+                            target="_top">Grafika</a>
+                    </div>
+                    <a class="gb_D" aria-label="Aplikacje Google" href="https://www.google.pl/intl/pl/about/products"
+                        aria-expanded="false" role="button" tabindex="0"><svg class="gb_Xe" focusable="false"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                            </path>
+                        </svg></a>
+                    <div class="zal">
+                        <a class="zaloguj"
+                            href="https://accounts.google.com/ServiceLogin?hl=pl&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl&amp;ec=GAZAmgQ"
+                            target="_top">Zaloguj się</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gog">
+                <div class="gogin">
+                    <img class="logo" alt="Google" height="92" src="logo.png">
+                </div>
+
+            </div>
+
+
+
+          
+
+
+            <form>
+                <div class="wyszukaj">
+                    <div class="wpisz">
+                           <v-autocompleter v-model="googleSearch" :options="cities" @enter="toggleResults" @keypress.enter="submit">
+                            </v-autocompleter> 
+                             
+                    </div>
+                    <input type="submit" class="przycisk" value="Szukaj w Google" />
+                    <input type="submit" class="przycisk" value="Szczęśliwy traf" />
+                </div>
+
+            </form>
+
+
+
+
+            <div class="puste">
+            </div>
+
+
+            <div class="stopka">
+                <div class="pol">Polska</div>
+                <div jscontroller="BLvsRb" class="KxwPGc SSwjIe" data-sfe="true" data-sfsw="1200"
+                    jsaction="rcuQ6b:npT2md">
+                    <div class="KxwPGc AghGtd"><a class="sbutt"
+                            href="https://about.google/?utm_source=google-PL&amp;utm_medium=referral&amp;utm_campaign=hp-footer&amp;fg=1"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://about.google/%3Futm_source%3Dgoogle-PL%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQkNQCCA0">O
+                            nas</a><a class="sbutt"
+                            href="https://www.google.com/intl/pl_pl/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://www.google.com/intl/pl_pl/ads/%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQkdQCCA4">Reklamuj
+                            się</a><a class="sbutt"
+                            href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://www.google.com/services/%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQktQCCA8">Dla
+                            firm</a><a class="sbutt" href="https://google.com/search/howsearchworks/?fg=1"> Jak działa
+                            wyszukiwarka </a>
+                    </div>
+                    <div class="KxwPGc ssOUyb"><a class="sbutt"
+                            href="https://sustainability.google/intl/pl/commitments-europe/?utm_source=googlehpfooter&amp;utm_medium=housepromos&amp;utm_campaign=bottom-footer&amp;utm_content="><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
+                                class="Pb9hCb" alt="" data-iml="1616399136589" data-atf="1"><span
+                                class="ktLKi">Neutralność węglowa od
+                                2007 roku</span></a></div>
+                    <div class="KxwPGc iTjxkf"><a class="sbutt"
+                            href="https://policies.google.com/privacy?hl=pl&amp;fg=1"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://policies.google.com/privacy%3Fhl%3Dpl%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQ8awCCBA">Prywatność</a><a
+                            class="sbutt" href="https://policies.google.com/terms?hl=pl&amp;fg=1"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://policies.google.com/terms%3Fhl%3Dpl%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQ8qwCCBE">Warunki</a>
+                        <a class="sbutt"
+                            ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://policies.google.com/terms%3Fhl%3Dpl%26fg%3D1&amp;ved=0ahUKEwitga-CtMPvAhWGxIUKHfnKC0UQ8qwCCBE">Ustawienia</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="ukryj">
+                <div class="pasek">
+                    <div class="but">Wszystko</div>
+                    <div class="but">Wiadomości</div>
+                    <div class="but">Grafika</div>
+                    <div class="but">Wideo</div>
+                    <div class="but">Mapy</div>
+                    <div class="but">Więcej</div>
+                    <div class="but">Ustawienia</div>
+                    <div class="but">Narzędzia</div>
+
+                </div>
+
+                <div class="wyniki">
+
+                    <p class="results_number">Około 10 800 000 wyników (0,79 s)</p>
+
+                    <div class="result">
+                        <a class="link" href="#">support.google.com › websearch › answer</a>
+                        <h2><a href="#">Sprawdzanie wyników wyszukiwania podróży przez Gmaila ...</a></h2>
+                        <p>Zobacz wyniki z innego konta Google. Uwaga: aby wykonać te czynności, musisz zalogować się na
+                            konto Google.
+                            Na telefonie lub tablecie z Androidem otwórz ...</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">support.google.com › websearch › answer</a>
+                        <h2><a href="#">Zawężanie wyników wyszukiwania - Wyszukiwarka google ...</a></h2>
+                        <p>Możesz zwiększyć precyzję wyników wyszuiwania, używając w zapytaniusłów i symboli.
+                            Wyszukiwarka Google zwykle ignoruje znaki interpunkcyjne, które nie ...</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">www.pozycjonusz.pl › rodzaje-wynikow-wyszukiwania...</a>
+                        <h2><a href="#">Rodzaje wyników wyszukiwania Google - ponad 20 ...</a></h2>
+                        <p>7) Wewnętrzna wyszukiwarka. Rodzaje wyników wyszukiwania Google wzbogacono jakiś czas temu o
+                            funkcję
+                            wewnętrznej wyszukiwarki. To rozwiązanie, bez ...</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">widoczni.com › blog › jak-wyszukiwac-w-google</a>
+                        <h2><a href="#">14 sposobów wyszukiwania w Google, których 95% z Was nie ...</a></h2>
+                        <p>>Szukanie frazy – zastosowanie cudzysłowu. Wyniki wyszukiwania w Google konkretnych fraz mogą
+                            być bardziej
+                            trafne, gdy zastosujemy cudzysłów. Algorytmy ...</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">www.empressia.pl › blog › 115-rozne-wyniki-wyszuki...</a>
+                        <h2><a href="#">Wyniki wyszukiwań Google – skąd takie rozbieżności?</a></h2>
+                        <p><span>21 lut 2019 — </span>Otóż inaczej będą prezentować się wyniki wyszukiwania po wpisaniu
+                            tej samej frazy
+                            przez ... Google przechwytuje adres IP i za jego pomocą generuje wyniki, np. po wpisaniu
+                            frazy ... Jaki jest
+                            koszt pozycjonowania sklepu?</p>
+                    </div>
+
+
+
+                    <div class="result">
+                        <a class="link" href="#">developers.google.com › advanced › guidelines › video</a>
+                        <h2><a href="#">Sprawdzone metody dotyczące filmów | Google Search Central</a></h2>
+                        <p>Wyniki wyszukiwania filmów w wyszukiwarce Google pojawiają się zarówno w ... Umieść jakiś
+                            rodzaj ekranu
+                            logowania do strony z filmem i samego filmu.</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">www.telepolis.pl › wiadomosci › aplikacje › wyszukiwa...</a>
+                        <h2><a href="#">Wyszukiwarka Google powie więcej o wynikach wyszukiwania ...</a></h2>
+                        <p><span>2 lut 2021 — </span>Szczegóły wyników wyszukiwania w Google. W polu z informacjami o
+                            ... co masz do
+                            Wikipedii? Jeśli widzisz jakiś błąd, to możesz go poprawić.</p>
+                    </div>
+
+                    <div class="result">
+                        <a class="link" href="#">developers.google.com › begginer › seo-starter-guide</a>
+                        <h2><a href="#">Co to jest pozycjonowanie? Od czego zacząć? Zobacz nasz ...</a></h2>
+                        <p>Uwzględnienie witryny w wynikach wyszukiwaia Google jest proste i bezpłatne. ... Tag infrmuje
+                            zarówno użytkowników, jak i wyszukiwarki, jaki jest ...</title>
+                        </p>
+                    </div>
+
+                </div>
+
+                <h3>Podobne wyszukiwania</h3>
+                <div class="podobne">
+
+                    <div class="boxpod1">
+                        <div class="pod">Google Trends</div>
+                        <div class="pod">Zaawansowane wyszukiwanie w Google</div>
+                        <div class="pod">Bezpłatna wyszukiwarka osób</div>
+                        <div class="pod">Wyniki wyszukiwania</div>
+                    </div>
+                    <div class="boxpod1">
+                        <div class="pod">Wyszukiwanie w internecie</div>
+                        <div class="pod">Wyszukiwanie zaawansowane definicja</div>
+                        <div class="pod">Oto niektóre wyniki wyszukiwania</div>
+                        <div class="pod">Zasady wyszukiwania w Google</div>
+                    </div>
+                </div>
+
+
+                <table class="strony">
+                    <tbody>
+                        <tr>
+                            <td><span class="blue">G</span></td>
+                            <td><span class="red">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="yellow">o</span></td>
+                            <td><span class="blue">g</span></td>
+                            <td><span class="green">l</span></td>
+                            <td><span class="red">e</span></td>
+                            <td rowspan="2" style="width: 10px;"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="page"></td>
+                            <td class="page" style="color: black; cursor: text;">1</td>
+                            <td class="page">2</td>
+                            <td class="page">3</td>
+                            <td class="page">4</td>
+                            <td class="page">5</td>
+                            <td class="page">6</td>
+                            <td class="page">7</td>
+                            <td class="page">8</td>
+                            <td class="page">9</td>
+                            <td class="page">10</td>
+                            <td colspan="3"></td>
+                            <td class="page">Następna</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <div class="stopkwysz">
+                    <div class="part">
+                        <div class="txt">
+                            Polska | Wadowice - Z Twojego adresu internetowego - Użyj dokładnej lokalizacji - Dowiedz
+                            się więcej
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="txt">
+                            <div class="stopkabut">Pomoc</div>
+                            <div class="stopkabut">Prześlij opinię</div>
+                            <div class="stopkabut">Prywatność</div>
+                            <div class="stopkabut">Warunki</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body><!--
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            googleSearch: '',
+            results: []
+        },
+        methods : {
+            findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
+                console.log('Fetch: ', this.googleSearch)
+                console.log(`http://localhost:8080/search.php?name=${this.googleSearch}`);
+                fetch(`http://localhost:8080/search.php?name=${this.googleSearch}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Data: ', data);
+                        this.results = data;
+                    });
+            })
+        }
+    })
+  	</script>-->
+     
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    googleSearch: '',
+                    cities: window.cities,
+                    showResults: false,
+                    isFocused: false,
+                    activeResult: 0,
+                    isInAutocompleter: false,
+                    filteredCities: [],
+                },
+                methods: {
+                    toggleFocused(value = undefined) {
+                        if (value === undefined) {
+                            return this.isFocused = !this.isFocused
+                        }
+                        this.isFocused = value
+                    },
+                    reset() {
+                        this.googleSearch = ''
+                        this.toggleResults(false)
+                    },
+                    toggleResults() {
+                        this.showResults = true;
+                    }
+                },
+
+            });
+        </script>
+        
+</html>
